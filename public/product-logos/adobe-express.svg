@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="adbGrad" x1="36" y1="45" x2="120" y2="135" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3366"/>
+      <stop offset="55%" stop-color="#FA0F00"/>
+      <stop offset="100%" stop-color="#7B61FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="20" fill="#F8FAFC"/>
+  <rect x="38" y="48" width="84" height="84" rx="20" fill="url(#adbGrad)"/>
+  <path d="M80 62l22 52h-12l-5-12H75l-5 12H58l22-52zm0 21l-5 12h10l-5-12z" fill="#FFFFFF"/>
+  <text x="136" y="88" fill="#061B45" font-family="Poppins, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.4">Adobe</text>
+  <text x="136" y="116" fill="#FA0F00" font-family="Poppins, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.4">Express</text>
+</svg>

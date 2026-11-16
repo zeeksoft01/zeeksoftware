@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <rect width="320" height="180" rx="20" fill="#141414"/>
+  <rect x="44" y="44" width="90" height="92" rx="18" fill="#000000" stroke="#2B2B2B" stroke-width="2"/>
+  <path d="M68 120V60h12l20 42V60h12v60h-12L80 78v42H68z" fill="#E50914"/>
+  <text x="150" y="94" fill="#E50914" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1">NETFLIX</text>
+  <rect x="150" y="106" width="84" height="20" rx="6" fill="#E50914"/>
+  <text x="192" y="120" text-anchor="middle" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="800">4K PREMIUM</text>
+</svg>

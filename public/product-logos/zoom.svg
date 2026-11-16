@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <rect width="320" height="180" rx="20" fill="#F8FAFC"/>
+  <circle cx="84" cy="90" r="44" fill="#2D8CFF"/>
+  <rect x="55" y="72" width="38" height="36" rx="8" fill="#FFFFFF"/>
+  <path d="M97 82l16-10v36l-16-10V82z" fill="#FFFFFF"/>
+  <text x="142" y="96" fill="#0B5CFF" font-family="Poppins, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.5">zoom</text>
+  <rect x="142" y="108" width="76" height="20" rx="6" fill="#0B5CFF"/>
+  <text x="180" y="122" text-anchor="middle" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="800">PREMIUM</text>
+</svg>

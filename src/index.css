@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy-dark: #061B45;
+    --brand-navy-deep: #071C3F;
+    --brand-navy-card: #0b2353;
+    --brand-orange: #FF7900;
+    --brand-orange-bright: #FF9200;
+    --brand-orange-glow: rgba(255, 121, 0, 0.4);
+    --brand-bg-light: #F0F5FC;
+    --brand-dark-text: #18253D;
+    --brand-muted: #64748B;
+    --font-poppins: 'Poppins', sans-serif;
+  }
+
+  html, body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #18253D;
+    background-color: #F8FAFC;
+    overflow-x: hidden;
+  }
+
+  *, *::before, *::after, button, input, select, textarea, p, span, h1, h2, h3, h4, h5, h6, a, label, table, td, th {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #061B45;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a75;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF7900;
+}
+
+/* Glowing orange button effect requested in prompt Section 9 */
+.btn-zeek-orange {
+  background-color: #FF7900;
+  color: #ffffff;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(255, 121, 0, 0.35);
+}
+
+.btn-zeek-orange:hover {
+  background-color: #FF9200;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(255, 121, 0, 0.5);
+}
+
+.btn-zeek-orange:active {
+  transform: translateY(0);
+}
+
+/* Glassmorphism helpers */
+.glass-navy {
+  background: rgba(6, 27, 69, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Luxury floating animations for software logos in Slide 2 */
+@keyframes float-gentle-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes float-gentle-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-1.5deg);
+  }
+}
+
+@keyframes float-gentle-3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-float-1 {
+  animation: float-gentle-1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-gentle-2 7.5s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.animate-float-3 {
+  animation: float-gentle-3 8.5s ease-in-out infinite;
+  animation-delay: 2.4s;
+}
+
+/* Subtle content entrance */
+@keyframes luxury-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-luxury-in {
+  animation: luxury-entrance 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes hero-progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes affiliate-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes affiliate-pulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-affiliate-float {
+  animation: affiliate-float 3.6s ease-in-out infinite;
+}
+
+.animate-affiliate-pulse {
+  animation: affiliate-pulse 2.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-affiliate-float,
+  .animate-affiliate-pulse {
+    animation: none;
+  }
+}
+
+

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="lovGrad" x1="42" y1="50" x2="122" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF5E36"/>
+      <stop offset="50%" stop-color="#FF2D85"/>
+      <stop offset="100%" stop-color="#6B5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="20" fill="#F8FAFC"/>
+  <path d="M84 130s-40-23-40-52c0-15 12-26 26-26 8 0 14 4 14 10 0-6 6-10 14-10 14 0 26 11 26 26 0 29-40 52-40 52z" fill="url(#lovGrad)"/>
+  <text x="140" y="94" fill="#061B45" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">Lovable</text>
+  <rect x="140" y="106" width="44" height="20" rx="6" fill="#FF2D85"/>
+  <text x="162" y="120" text-anchor="middle" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="11" font-weight="800">PRO</text>
+</svg>

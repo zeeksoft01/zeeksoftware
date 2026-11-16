@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="gemGrad" x1="40" y1="40" x2="128" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4E8DF5"/>
+      <stop offset="50%" stop-color="#7C5CFF"/>
+      <stop offset="100%" stop-color="#D96570"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="20" fill="#F8FAFC"/>
+  <path d="M84 40c3 27 19 43 46 46-27 3-43 19-46 46-3-27-19-43-46-46 27-3 43-19 46-46z" fill="url(#gemGrad)"/>
+  <circle cx="116" cy="54" r="5" fill="#4E8DF5"/>
+  <text x="142" y="94" fill="#061B45" font-family="Poppins, Arial, sans-serif" font-size="29" font-weight="800" letter-spacing="-0.5">Gemini</text>
+  <rect x="142" y="106" width="70" height="20" rx="6" fill="#4E8DF5"/>
+  <text x="177" y="120" text-anchor="middle" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="800">PRO AI</text>
+</svg>

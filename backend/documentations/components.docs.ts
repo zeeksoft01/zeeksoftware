@@ -1,0 +1,132 @@
+export const openApiComponents = {
+  securitySchemes: {
+    AdminBearerAuth: {
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'Token',
+      description: 'Enter your Admin token returned by POST /api/admin/login (e.g. zeekadmin2026)',
+    },
+    AffiliateBearerAuth: {
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'HMAC Token',
+      description: 'Enter the Affiliate token returned by POST /api/affiliates/register or /api/affiliates/login',
+    },
+  },
+  schemas: {
+    ErrorResponse: {
+      type: 'object',
+      properties: {
+        success: { type: 'boolean', example: false },
+        error: { type: 'string', example: 'Validation error or resource not found' },
+      },
+    },
+    Product: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', example: 'prod-canva-pro-1y' },
+        name: { type: 'string', example: 'Canva Pro' },
+        category: { type: 'string', example: 'Graphic Design & Creativity' },
+        image: { type: 'string', example: 'https://images.unsplash.com/photo-1626785774573-4b799315345d' },
+        shortDescription: { type: 'string' },
+        detailedDescription: { type: 'string' },
+        price: { type: 'number', example: 3000 },
+        duration: { type: 'string', example: '1 Year' },
+        isAvailable: { type: 'boolean', example: true },
+        isFeatured: { type: 'boolean', example: true },
+        displayOrder: { type: 'number', example: 1 },
+        commissionRateOverride: { type: 'number', example: 10 },
+      },
+    },
+    CreateProductInput: {
+      type: 'object',
+      required: ['name', 'category', 'image', 'shortDescription', 'detailedDescription', 'price', 'duration'],
+      properties: {
+        name: { type: 'string', example: 'Perplexity Pro' },
+        category: { type: 'string', example: 'AI & Productivity' },
+        image: { type: 'string', example: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80' },
+        shortDescription: { type: 'string', example: 'Real-time AI answer engine with citation synthesis.' },
+        detailedDescription: { type: 'string', example: 'Full access to Perplexity Pro models and unlimited research queries.' },
+        price: { type: 'number', example: 4500 },
+        duration: { type: 'string', example: '1 Month' },
+        isAvailable: { type: 'boolean', default: true },
+        isFeatured: { type: 'boolean', default: false },
+        fulfillmentInstructions: { type: 'string', example: 'Invite delivered to your email.' },
+      },
+    },
+    CreateOrderInput: {
+      type: 'object',
+      required: ['customerName', 'customerEmail', 'customerWhatsApp', 'items'],
+      properties: {
+        customerName: { type: 'string', example: 'Chinedu Okafor' },
+        customerEmail: { type: 'string', format: 'email', example: 'chinedu@example.com' },
+        customerWhatsApp: { type: 'string', example: '08012345678' },
+        items: {
+          type: 'array',
+          items: {
+            type: 'object',
+            required: ['productId', 'quantity'],
+            properties: {
+              productId: { type: 'string', example: 'prod-canva-pro-1y' },
+              quantity: { type: 'integer', minimum: 1, example: 1 },
+            },
+          },
+        },
+        paymentMethod: {
+          type: 'string',
+          enum: ['Paystack', 'Direct Bank Transfer', 'USDT', 'Bybit', 'Binance'],
+          default: 'Paystack',
+        },
+        proofNote: { type: 'string', example: 'Activate on chinedu@example.com' },
+        referralCode: { type: 'string', example: 'ZEEK12345' },
+      },
+    },
+    Order: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', example: 'ZEEK-ORD-104928' },
+        customerName: { type: 'string' },
+        customerEmail: { type: 'string' },
+        customerWhatsApp: { type: 'string' },
+        totalAmount: { type: 'number', example: 3000 },
+        paymentMethod: { type: 'string' },
+        paymentStatus: {
+          type: 'string',
+          enum: ['pending', 'awaiting_verification', 'paid', 'failed', 'refunded'],
+        },
+        fulfillmentStatus: { type: 'string' },
+        paymentReference: { type: 'string' },
+        referralCode: { type: 'string' },
+        createdAt: { type: 'string', format: 'date-time' },
+      },
+    },
+    AffiliateRegisterInput: {
+      type: 'object',
+      required: ['fullName', 'email', 'phone', 'bankName', 'accountNumber', 'accountName'],
+      properties: {
+        fullName: { type: 'string', example: 'Babatunde Adeyemi' },
+        email: { type: 'string', format: 'email', example: 'adeyemi@example.com' },
+        phone: { type: 'string', example: '+2348123456789' },
+        password: { type: 'string', example: 'SecretPass123' },
+        bankName: { type: 'string', example: 'GTBank' },
+        accountNumber: { type: 'string', example: '0123456789' },
+        accountName: { type: 'string', example: 'Babatunde Adeyemi' },
+      },
+    },
+    Affiliate: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', example: 'aff-1731562000-ab12' },
+        fullName: { type: 'string' },
+        email: { type: 'string' },
+        phone: { type: 'string' },
+        referralCode: { type: 'string', example: 'ZEEK84920' },
+        status: { type: 'string', enum: ['active', 'suspended'] },
+        availableBalance: { type: 'number', example: 0 },
+        totalEarned: { type: 'number', example: 0 },
+        totalWithdrawn: { type: 'number', example: 0 },
+        totalClicks: { type: 'number', example: 0 },
+      },
+    },
+  },
+};
